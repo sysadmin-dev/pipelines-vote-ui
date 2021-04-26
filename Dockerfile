@@ -4,7 +4,7 @@ FROM python:3.10-rc-slim-buster
 
 # Copy our code from the current folder to /app inside the container
 ADD . /opt/app-root/src
-
+WORKDIR /opt/app-root/src
 RUN pip install -r requirements.txt
 
 # Make port 80 available for links and/or publish
